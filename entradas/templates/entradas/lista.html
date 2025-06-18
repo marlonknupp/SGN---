@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container mt-4" style="max-width: 1200px;">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Lista de Entradas</h2>
+      <a href="{% url 'criar_entrada' %}" class="btn btn-success mt-3">Criar Entrada</a>
+    </div>
+
+    <div class="card p-4 shadow-sm">
+      <table class="table table-bordered table-hover">
+        <thead class="table-primary">
+          <tr>
+            <th>Modelo</th>
+            <th>Quantidade</th>
+            <th>Data de Entrada</th>
+            <th>Observações</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% if entradas %}
+            {% for entrada in entradas %}
+              <tr>
+                <td>{{ entrada.modelo }}</td>
+                <td>{{ entrada.quantidade }}</td>
+                <td>{{ entrada.data_entrada }}</td>
+                <td>{{ entrada.observações }}</td>
+              </tr>
+            {% endfor %}
+          {% else %}
+            <tr>
+              <td colspan="4" class="text-center">Nenhuma entrada encontrada.</td>
+            </tr>
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,48 @@
+<div class="col-auto col-md-2 col-xl-2 px-0 bg-dark">
+  <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+    <button class="btn btn-dark d-block d-sm-none mb-3" type="button" data-bs-toggle="collapse"
+      data-bs-target="#menuCollapse" aria-expanded="false" aria-controls="menuCollapse">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+    <div class="collapse d-sm-block" id="menuCollapse">
+      <ul class="nav flex-column align-items-start" id="menu">
+        <li>
+          <a href="{% url 'home' %}" class="nav-link d-flex align-items-center px-0">
+            <i class="bi bi-speedometer2 fs-4"></i> <span class="ms-2">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'lista_user' %}" class="nav-link d-flex align-items-center px-0">
+            <i class="bi bi-person-plus-fill fs-4"></i> <span class="ms-2">User</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'lista_notebook' %}" class="nav-link d-flex align-items-center px-0">
+            <i class="bi bi-display fs-4"></i> <span class="ms-2">Notebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'lista_ocorrencia' %}" class="nav-link d-flex align-items-center px-0">
+            <i class="bi bi-exclamation-triangle-fill fs-4"></i> <span class="ms-2">Ocorrências</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'lista_entrada' %}" class="nav-link d-flex align-items-center px-0">
+            <i class="bi bi-arrow-up-right-square fs-4"></i> <span class="ms-2">Entradas</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'lista_modelo' %}" class="nav-link d-flex align-items-center px-0">
+            <i class="bi bi-arrow-down-left-square fs-4"></i> <span class="ms-2">Modelo</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'lista_leasing' %}" class="nav-link d-flex align-items-center px-0">
+            <i class="bi bi-person-workspace"></i> <span class="ms-2">Home Office</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <hr>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container mt-4" style="max-width: 1200px;">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Lista de Modelos</h2>
+      <a href="{% url 'criar_modelo' %}" class="btn btn-success mt-3">Criar Modelo</a>
+    </div>
+    <div class="card p-4 shadow-sm">
+      <table class="table table-bordered table-hover">
+        <thead class="table-primary">
+          <tr>
+            <th>modelo</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% if modelos %}
+            {% for modelo in modelos %}
+              <tr>
+                <td>{{ modelo.modelo }}</td>
+                <td>{{ modelo.descricao }}</td>
+                <td>{{ modelo.preco }}</td>
+              </tr>
+            {% endfor %}
+          {% else %}
+            <tr>
+              <td colspan="4" class="text-center">Nenhum modelo encontrado.</td>
+            </tr>
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

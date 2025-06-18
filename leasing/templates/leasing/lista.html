@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container mt-4" style="max-width: 1200px;">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Cadastro Home Office</h2>
+      <a href="{% url 'location_user' %}" class="btn btn-success mt-3">Cadastro Home Office</a>
+    </div>
+    <div class="card p-4 shadow-sm">
+      <table class="table table-bordered table-hover">
+        <thead class="table-primary">
+          <tr>
+            <th>modelo</th>
+            <th>usuario</th>
+            <th>cidade</th>
+            <th>data_entrada</th>
+            <th>quantidade</th>
+            <th>observações</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% if leasings %}
+            {% for leasing in leasings %}
+              <tr>
+                <td>{{ leasing.modelo }}</td>
+                <td>{{ leasing.usuario }}</td>
+                <td>{{ leasing.cidade }}</td>
+                <td>{{ leasing.data_entrada }}</td>
+                <td>{{ leasing.quantidade }}</td>
+                <td>{{ leasing.observações }}</td>
+
+              </tr>
+            {% endfor %}
+          {% else %}
+            <tr>
+              <td colspan="4" class="text-center">Nenhum notebook encontrado.</td>
+            </tr>
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}
