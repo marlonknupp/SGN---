@@ -30,14 +30,62 @@
   </div>
 
   <!-- Campo de busca -->
-<!-- Campo de busca -->
-<nav class="p-0 mt-4">
-  <div class="container-fluid bg-body-tertiary" style="max-width: 900px; margin-left: 0; border-radius: 50px;">
-    <form class="d-flex p-2" role="search">
-      <input class="form-control me-2" type="search" placeholder="Digite aqui o notebook" aria-label="Search"/>
-      <button class="btn btn-outline-success" type="submit">Procurar</button>
-    </form>
-  </div>
-</nav>
+  <nav class="p-0 mt-4">
+    <div class="container-fluid bg-body-tertiary" style="max-width: 900px; margin-left: 0; border-radius: 50px;">
+      <form class="d-flex p-2" role="search">
+        <input class="form-control me-2" type="search" placeholder="Digite aqui o notebook" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Procurar</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Mapa de localização -->
+<div class="container mt-5">
+  <h5  
+  style="margin-left: 340px; max-width: fit-content;"
+>
+  Localização dos Notebooks
+</h5>
+
+
+  <div
+    id="map"
+    class="d-block"
+    style="
+      height: 300px;
+      border-radius: 20px;
+      max-width: 700px;       
+      margin-left: 130px;    
+    "
+  ></div>
+</div>
+
+
+  <!-- Scripts do Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+  var map = L.map('map').setView([-22.9068, -43.1729], 10); // centro no Rio de Janeiro
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  var computerIcon = L.icon({
+    iconUrl: 'https://cdn-icons-png.flaticon.com/512/1086/1086933.png',
+    iconSize: [32, 32],    
+    iconAnchor: [16, 32],  
+    popupAnchor: [0, -32]  
+  });
+
+  var cidades = {{ cidades_marcadores|safe }};  // <-- LINHA CORRETA
+
+  cidades.forEach(function(cidade) {
+    L.marker([cidade.lat, cidade.lng], { icon: computerIcon }).addTo(map)
+      .bindPopup(cidade.cidade);
+  });
+</script>
+
 
 {% endblock %}

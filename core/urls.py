@@ -4,7 +4,7 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('admin/', admin.site.urls),    # mantém o acesso ao painel admin (/admin/)
-    path('entradas/', include('entradas.urls')),  # ligando o app entradas.
+    path('entradas/', include('entradas.urls')),  # ligando os app's  
     path('leasing/', include('leasing.urls')),
     path('modelo/', include ('modelo.urls')),
     path('notebook/', include('notebook.urls')),
