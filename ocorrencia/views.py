@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Ocorrencia
 from .forms import OcorrenciaForm
 
@@ -15,3 +15,25 @@ def criar_ocorrencia(request):
     else:
         form = OcorrenciaForm()
         return render(request, 'Ocorrencia/criar_ocorrencia.html', {'form': form})
+    
+def ver_ocorrencia(request, pk):
+    ocorrencia = get_object_or_404(Ocorrencia, pk=pk)
+    return render(request, 'ocorrencia/ver.html', {'ocorrencia': ocorrencia})
+
+def editar_ocorrencia(request, pk):
+    ocorrencia = get_object_or_404(Ocorrencia, pk=pk)
+    if request.method == 'POST':
+        form = OcorrenciaForm(request.POST, instance=ocorrencia)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_ocorrencia')
+    else:
+        form = OcorrenciaForm(instance=ocorrencia)
+    return render(request, 'ocorrencia/form.html', {'form': form})
+
+def deletar_ocorrencia(request, pk):
+    ocorrencia = get_object_or_404(Ocorrencia, pk=pk)
+    if request.method == 'POST':
+        ocorrencia.delete()
+        return redirect('lista_ocorrencia')
+    return render(request, 'ocorrencia/confirmar_delete.html', {'ocorrencia': ocorrencia})

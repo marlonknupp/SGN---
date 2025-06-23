@@ -13,6 +13,7 @@
             <th>modelo</th>
             <th>Descrição</th>
             <th>Preço</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -22,6 +23,19 @@
                 <td>{{ modelo.modelo }}</td>
                 <td>{{ modelo.descricao }}</td>
                 <td>{{ modelo.preco }}</td>
+                <td>
+                  <div class="d-flex gap-2">
+                    <a href="{% url 'ver_modelo' modelo.id %}" class="btn btn-info btn-sm">
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="{% url 'editar_modelo' modelo.id %}" class="btn btn-warning btn-sm">
+                      <i class="fas fa-pen"></i>
+                    </a>
+                    <a href="{% url 'deletar_modelo' modelo.id %}" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?')">
+                      <i class="fas fa-trash"></i>
+                    </a>
+                  </div>
+                </td>
               </tr>
             {% endfor %}
           {% else %}

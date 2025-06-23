@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Detalhes do Modelo</h2>
+  <p><strong>Modelo:</strong> {{ modelo.modelo }}</p>
+  <p><strong>Descrição:</strong> {{ modelo.descricao }}</p>
+  <p><strong>Preço:</strong> {{ modelo.preco }}</p>
+  <a href="{% url 'lista_modelo' %}" class="btn btn-secondary mt-3">Voltar à lista</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Detalhes da Ocorrencia</h2>
+  <p><strong>Notebook:</strong> {{ ocorrencia.notebook }}</p>
+  <p><strong>Tipo:</strong> {{ ocorrencia.tipo }}</p>
+  <p><strong>usuario:</strong> {{ ocorrencia.usuario }}</p>
+  <p><strong>observacao:</strong> {{ ocorrencia.observacao }}</p>
+ 
+  <a href="{% url 'lista_ocorrencia' %}" class="btn btn-secondary mt-3">Voltar à lista</a>
+{% endblock %}

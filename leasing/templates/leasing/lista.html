@@ -16,6 +16,7 @@
             <th>data_entrada</th>
             <th>quantidade</th>
             <th>observações</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -28,7 +29,19 @@
                 <td>{{ leasing.data_entrada }}</td>
                 <td>{{ leasing.quantidade }}</td>
                 <td>{{ leasing.observações }}</td>
-
+                <td>
+                  <div class="d-flex gap-2">
+                    <a href="{% url 'ver_leasing' leasing.id %}" class="btn btn-info btn-sm">
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="{% url 'editar_leasing' leasing.id %}" class="btn btn-warning btn-sm">
+                      <i class="fas fa-pen"></i>
+                    </a>
+                    <a href="{% url 'deletar_leasing' leasing.id %}" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?')">
+                      <i class="fas fa-trash"></i>
+                    </a>
+                  </div>
+                </td>
               </tr>
             {% endfor %}
           {% else %}

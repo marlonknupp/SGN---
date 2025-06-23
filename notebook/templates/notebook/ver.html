@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Detalhes do Notebook</h2>
+  <p><strong>Modelo:</strong> {{ notebook.modelo }}</p>
+  <p><strong>Quantidade:</strong> {{ notebook.quantidade }}</p>
+  <a href="{% url 'lista_notebook' %}" class="btn btn-secondary mt-3">Voltar à lista</a>
+{% endblock %}

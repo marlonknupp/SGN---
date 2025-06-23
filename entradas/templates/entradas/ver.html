@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Detalhes da Entrada</h2>
+  <p><strong>Modelo:</strong> {{ entrada.modelo }}</p>
+  <p><strong>Quantidade:</strong> {{ entrada.quantidade }}</p>
+  <p><strong>Data de Entrada:</strong> {{ entrada.data_entrada }}</p>
+  <p><strong>Observações:</strong> {{ entrada.observações }}</p>
+  <a href="{% url 'lista_entrada' %}" class="btn btn-secondary mt-3">Voltar à lista</a>
+{% endblock %}

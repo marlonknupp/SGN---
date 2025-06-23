@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Detalhes do Usuário</h2>
+  <p><strong>modelo:</strong> {{ leasing.modelo }}</p>
+  <p><strong>usuario:</strong> {{ leasing.usuario }}</p>
+  <p><strong>cidade:</strong> {{ leasing.cidade }}</p>
+  <p><strong>data_entrada:</strong> {{ leasing.data_entrada }}</p>
+  <p><strong>quantidade:</strong> {{ leasing.quantidade }}</p>
+  <p><strong>observações</strong> {{ leasing.observações }}</p>
+  <a href="{% url 'lista_leasing' %}" class="btn btn-secondary mt-3">Voltar à lista</a>
+{% endblock %}

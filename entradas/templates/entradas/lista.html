@@ -15,6 +15,7 @@
             <th>Quantidade</th>
             <th>Data de Entrada</th>
             <th>Observações</th>
+            <th>Ações</th>  <!-- Coluna para os botões -->
           </tr>
         </thead>
         <tbody>
@@ -25,11 +26,22 @@
                 <td>{{ entrada.quantidade }}</td>
                 <td>{{ entrada.data_entrada }}</td>
                 <td>{{ entrada.observações }}</td>
+                <td>
+                    <a href="{% url 'ver_entrada' entrada.id %}" class="btn btn-info btn-sm">
+                      <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="{% url 'editar_entrada' entrada.id %}" class="btn btn-warning btn-sm">
+                      <i class="fas fa-pen"></i>
+                    </a>
+                    <a href="{% url 'deletar_entrada' entrada.id %}" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?')">
+                      <i class="fas fa-trash"></i>
+                    </a>
+                </td>
               </tr>
             {% endfor %}
           {% else %}
             <tr>
-              <td colspan="4" class="text-center">Nenhuma entrada encontrada.</td>
+              <td colspan="5" class="text-center">Nenhuma entrada encontrada.</td>
             </tr>
           {% endif %}
         </tbody>
