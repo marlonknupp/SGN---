@@ -9,7 +9,7 @@ class Leasing(models.Model):
     cidade = models.CharField(max_length=100)
     data_entrada = models.DateField(default=datetime.date.today)  # define data atual na criação
     quantidade = models.IntegerField(null=True, blank=True)
-    observações = models.TextField(null=True, blank=True)
+    observacoes = models.TextField(null=True, blank=True)
     
     ativo = models.BooleanField(default=True)
     home_office = models.BooleanField(default=False)

@@ -1,0 +1,571 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$8E7MmOoxFsIURLtPXUn22R$htfwbJ6bxiz9W2iQqewWdoaWHxIwwFjaXjkNVTVU1DI=",
+    "last_login": "2025-06-21T22:39:45.545Z",
+    "is_superuser": true,
+    "username": "marlonknupp",
+    "first_name": "",
+    "last_name": "",
+    "email": "marlonjcc23@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-06-06T12:48:05.855Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "notebook.notebook",
+  "pk": 1,
+  "fields": {
+    "modelo": 1,
+    "quantidade": 79
+  }
+},
+{
+  "model": "notebook.notebook",
+  "pk": 2,
+  "fields": {
+    "modelo": 2,
+    "quantidade": 28
+  }
+},
+{
+  "model": "notebook.notebook",
+  "pk": 3,
+  "fields": {
+    "modelo": 8,
+    "quantidade": 14
+  }
+},
+{
+  "model": "notebook.notebook",
+  "pk": 4,
+  "fields": {
+    "modelo": 3,
+    "quantidade": 34
+  }
+},
+{
+  "model": "notebook.notebook",
+  "pk": 5,
+  "fields": {
+    "modelo": 5,
+    "quantidade": 5
+  }
+},
+{
+  "model": "notebook.notebook",
+  "pk": 6,
+  "fields": {
+    "modelo": 6,
+    "quantidade": 61
+  }
+},
+{
+  "model": "notebook.notebook",
+  "pk": 7,
+  "fields": {
+    "modelo": 7,
+    "quantidade": 51
+  }
+},
+{
+  "model": "notebook.notebook",
+  "pk": 8,
+  "fields": {
+    "modelo": 4,
+    "quantidade": 11
+  }
+},
+{
+  "model": "modelo.modelo",
+  "pk": 1,
+  "fields": {
+    "modelo": "DELL",
+    "descricao": "Intel Core i5 11¬ GeraþÒo | 8GB RAM DDR4 | SSD 256GB | Tela 15.6\" HD | Windows 11",
+    "preco": "2390.00"
+  }
+},
+{
+  "model": "modelo.modelo",
+  "pk": 2,
+  "fields": {
+    "modelo": "POSITIVO",
+    "descricao": "Intel Celeron Dual-Core | 4GB RAM | SSD 128GB | Tela 14\" HD | Windows 11",
+    "preco": "1900.00"
+  }
+},
+{
+  "model": "modelo.modelo",
+  "pk": 3,
+  "fields": {
+    "modelo": "SAMSUMG",
+    "descricao": "Intel Core i5 11¬ GeraþÒo | 8GB RAM DDR4 | SSD 256GB | Tela 15.6\" Full HD | Windows 11",
+    "preco": "2300.00"
+  }
+},
+{
+  "model": "modelo.modelo",
+  "pk": 4,
+  "fields": {
+    "modelo": "ASUS",
+    "descricao": "Processador: Intel Core i3 11¬ GeraþÒo, Mem¾ria RAM: 8GB DDR4,\r\nArmazenamento: SSD 256GB, Tela: 15.6\" Full HD, Sistema Operacional: Windows 11, Outros: Leve e com bom acabamento",
+    "preco": "3900.00"
+  }
+},
+{
+  "model": "modelo.modelo",
+  "pk": 5,
+  "fields": {
+    "modelo": "ACER",
+    "descricao": "bom tambem",
+    "preco": "2900.00"
+  }
+},
+{
+  "model": "modelo.modelo",
+  "pk": 6,
+  "fields": {
+    "modelo": "LENOVO",
+    "descricao": "A Lenovo Ú geralmente considerada uma marca boa, especialmente quando se trata de notebooks",
+    "preco": "2400.00"
+  }
+},
+{
+  "model": "modelo.modelo",
+  "pk": 7,
+  "fields": {
+    "modelo": "HP",
+    "descricao": "HP Ú uma das fabricantes mais tradicionais no segmento de notebooks. Em seu catßlogo, a empresa oferece tanto modelos para atender necessidades mais bßsicas",
+    "preco": "2900.00"
+  }
+},
+{
+  "model": "modelo.modelo",
+  "pk": 8,
+  "fields": {
+    "modelo": "VAIO",
+    "descricao": "A VAIO Ú uma marca de alta qualidade, conhecida por sua excelÛncia em design e desempenho.",
+    "preco": "3100.00"
+  }
+},
+{
+  "model": "modelo.modelo",
+  "pk": 11,
+  "fields": {
+    "modelo": "APPLE",
+    "descricao": "Tela: 13,6\" Retina 2560x1664 pixels, True Tone | Processador: Apple M2 (8-core CPU, 8-core GPU) | RAM: 8 GB unificada (atÚ 24 GB) | Armazenamento: SSD 256 GB (atÚ 2 TB) | Sistema: macOS Ventura | Bateria: AtÚ 18 horas | Conectividade: Wi-Fi 6, Bluetooth 5.0 | Portas: 2x Thunderbolt/USB 4, entrada fone 3,5 mm | Peso: 1,24 kg | CÔmera: 1080p FaceTime HD | Teclado: Magic Keyboard retroiluminado com Touch ID | ┴udio: Sistema estÚreo com ßudio espacial",
+    "preco": "13000.00"
+  }
+},
+{
+  "model": "leasing.leasing",
+  "pk": 13,
+  "fields": {
+    "modelo": 1,
+    "usuario": 10,
+    "cidade": "rio de janeiro",
+    "data_entrada": "2025-06-16",
+    "quantidade": 20,
+    "observacoes": "Empresa esta doando essa quantidade para a empresa parceira. autorizado!",
+    "ativo": true,
+    "home_office": false
+  }
+},
+{
+  "model": "leasing.leasing",
+  "pk": 14,
+  "fields": {
+    "modelo": 3,
+    "usuario": 2,
+    "cidade": "sao goncalo",
+    "data_entrada": "2025-06-18",
+    "quantidade": 2,
+    "observacoes": "dois notebooks para uso trabalho!",
+    "ativo": true,
+    "home_office": false
+  }
+},
+{
+  "model": "ocorrencia.ocorrencia",
+  "pk": 1,
+  "fields": {
+    "notebook": 1,
+    "tipo": "manutencao",
+    "usuario": 2,
+    "data": "2025-06-08T04:18:29.965Z",
+    "observacao": "nao esta ligando, pode verificar pra mim por favor? obrigado!"
+  }
+},
+{
+  "model": "ocorrencia.ocorrencia",
+  "pk": 2,
+  "fields": {
+    "notebook": null,
+    "tipo": "defeito",
+    "usuario": 9,
+    "data": "2025-06-13T03:00:00Z",
+    "observacao": "o notebook caiu e parou de funcionar ."
+  }
+},
+{
+  "model": "ocorrencia.ocorrencia",
+  "pk": 3,
+  "fields": {
+    "notebook": 5,
+    "tipo": "defeito",
+    "usuario": 7,
+    "data": "2025-06-24T03:00:00Z",
+    "observacao": "parou o teclado"
+  }
+},
+{
+  "model": "ocorrencia.ocorrencia",
+  "pk": 4,
+  "fields": {
+    "notebook": 8,
+    "tipo": "perda",
+    "usuario": 3,
+    "data": null,
+    "observacao": "camera ficou ruim.."
+  }
+},
+{
+  "model": "ocorrencia.ocorrencia",
+  "pk": 5,
+  "fields": {
+    "notebook": 3,
+    "tipo": "manutencao",
+    "usuario": 3,
+    "data": "2025-06-19T03:00:00Z",
+    "observacao": "ele s¾ fica na tela de bios, verificar."
+  }
+},
+{
+  "model": "ocorrencia.ocorrencia",
+  "pk": 6,
+  "fields": {
+    "notebook": 1,
+    "tipo": "defeito",
+    "usuario": 11,
+    "data": "2025-06-11T03:00:00Z",
+    "observacao": "o macedo disse que dsjajda"
+  }
+},
+{
+  "model": "user.usuario",
+  "pk": 1,
+  "fields": {
+    "nome": "marlon",
+    "telefone": "21970833535",
+    "email": "marlonjcc23@gmail.com",
+    "cpf": "15306842771",
+    "criado_em": "2025-06-08T04:18:53.418Z"
+  }
+},
+{
+  "model": "user.usuario",
+  "pk": 2,
+  "fields": {
+    "nome": "gabriele",
+    "telefone": "2186403627",
+    "email": "gabriele@gmail.com",
+    "cpf": "90389038109",
+    "criado_em": "2025-06-08T04:19:07.446Z"
+  }
+},
+{
+  "model": "user.usuario",
+  "pk": 3,
+  "fields": {
+    "nome": "marcelo",
+    "telefone": "3289378391",
+    "email": "marcelin@gmail.com",
+    "cpf": "39839782937",
+    "criado_em": "2025-06-08T04:19:20.812Z"
+  }
+},
+{
+  "model": "user.usuario",
+  "pk": 4,
+  "fields": {
+    "nome": "mario",
+    "telefone": "32323131",
+    "email": "mariozin@gmail.com",
+    "cpf": "31414214214",
+    "criado_em": "2025-06-08T04:22:29.114Z"
+  }
+},
+{
+  "model": "user.usuario",
+  "pk": 5,
+  "fields": {
+    "nome": "josue",
+    "telefone": "131313131",
+    "email": "josue@gmail.com",
+    "cpf": "3231414141",
+    "criado_em": "2025-06-13T15:27:54.996Z"
+  }
+},
+{
+  "model": "user.usuario",
+  "pk": 7,
+  "fields": {
+    "nome": "janaina",
+    "telefone": "13131",
+    "email": "janaina@gmail.com",
+    "cpf": "q4q4q4q",
+    "criado_em": "2025-06-14T18:38:03.800Z"
+  }
+},
+{
+  "model": "user.usuario",
+  "pk": 8,
+  "fields": {
+    "nome": "luana",
+    "telefone": "3829831731",
+    "email": "luana@gmail.com",
+    "cpf": "323131311",
+    "criado_em": "2025-06-14T20:34:44.680Z"
+  }
+},
+{
+  "model": "user.usuario",
+  "pk": 9,
+  "fields": {
+    "nome": "pablo",
+    "telefone": "3187189371",
+    "email": "pablo@gmail.com",
+    "cpf": "321313131311",
+    "criado_em": "2025-06-14T20:35:45.029Z"
+  }
+},
+{
+  "model": "user.usuario",
+  "pk": 10,
+  "fields": {
+    "nome": "felipe",
+    "telefone": "3131331",
+    "email": "felipe@gmail.com",
+    "cpf": "3131313131",
+    "criado_em": "2025-06-14T20:37:57.691Z"
+  }
+},
+{
+  "model": "user.usuario",
+  "pk": 11,
+  "fields": {
+    "nome": "macedo",
+    "telefone": "2132121421",
+    "email": "macedo@gmail.com",
+    "cpf": "41414141",
+    "criado_em": "2025-06-14T20:38:45.237Z"
+  }
+},
+{
+  "model": "user.usuario",
+  "pk": 12,
+  "fields": {
+    "nome": "maicon",
+    "telefone": "3821789371",
+    "email": "maicon@gmail.com",
+    "cpf": "3918831831",
+    "criado_em": "2025-06-14T20:39:16.322Z"
+  }
+},
+{
+  "model": "user.usuario",
+  "pk": 13,
+  "fields": {
+    "nome": "magalu",
+    "telefone": "3213131321",
+    "email": "magalu@gmail.com",
+    "cpf": "323141414",
+    "criado_em": "2025-06-15T17:03:39.947Z"
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 29,
+  "fields": {
+    "modelo": 6,
+    "quantidade": 4,
+    "data_entrada": null,
+    "observacoes": "dfhd"
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 30,
+  "fields": {
+    "modelo": 2,
+    "quantidade": 14,
+    "data_entrada": "2025-06-14T03:00:00Z",
+    "observacoes": "marca bomba"
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 31,
+  "fields": {
+    "modelo": 7,
+    "quantidade": 51,
+    "data_entrada": "2025-06-14T03:00:00Z",
+    "observacoes": ""
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 32,
+  "fields": {
+    "modelo": 8,
+    "quantidade": 3,
+    "data_entrada": "2025-06-14T03:00:00Z",
+    "observacoes": ""
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 33,
+  "fields": {
+    "modelo": 6,
+    "quantidade": 2,
+    "data_entrada": "2025-06-14T03:00:00Z",
+    "observacoes": ""
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 34,
+  "fields": {
+    "modelo": 1,
+    "quantidade": 79,
+    "data_entrada": "2025-06-14T03:00:00Z",
+    "observacoes": "todos em perfeito estado"
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 35,
+  "fields": {
+    "modelo": 4,
+    "quantidade": 12,
+    "data_entrada": "2025-06-14T03:00:00Z",
+    "observacoes": "todos i7"
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 36,
+  "fields": {
+    "modelo": 8,
+    "quantidade": 3,
+    "data_entrada": "2025-06-14T03:00:00Z",
+    "observacoes": "abaixo do valor de mercado"
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 37,
+  "fields": {
+    "modelo": 8,
+    "quantidade": 3,
+    "data_entrada": "2025-06-14T03:00:00Z",
+    "observacoes": "mais note chegando"
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 40,
+  "fields": {
+    "modelo": 3,
+    "quantidade": 34,
+    "data_entrada": "2025-06-14T03:00:00Z",
+    "observacoes": "em perfeito estado"
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 41,
+  "fields": {
+    "modelo": 11,
+    "quantidade": 32,
+    "data_entrada": "2025-06-17T03:00:00Z",
+    "observacoes": "esses vÒo sair rapido"
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 42,
+  "fields": {
+    "modelo": 11,
+    "quantidade": 3,
+    "data_entrada": "2025-06-14T03:00:00Z",
+    "observacoes": ""
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 43,
+  "fields": {
+    "modelo": 11,
+    "quantidade": 3,
+    "data_entrada": "2025-06-14T03:00:00Z",
+    "observacoes": "da"
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 44,
+  "fields": {
+    "modelo": 11,
+    "quantidade": 5,
+    "data_entrada": "2025-06-14T03:00:00Z",
+    "observacoes": "f"
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 45,
+  "fields": {
+    "modelo": 11,
+    "quantidade": 3,
+    "data_entrada": "2025-06-14T03:00:00Z",
+    "observacoes": "da"
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 46,
+  "fields": {
+    "modelo": 8,
+    "quantidade": 1,
+    "data_entrada": "2025-06-14T03:00:00Z",
+    "observacoes": ""
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 47,
+  "fields": {
+    "modelo": 8,
+    "quantidade": 2,
+    "data_entrada": "2025-06-09T03:00:00Z",
+    "observacoes": "mais dois"
+  }
+},
+{
+  "model": "entradas.entrada",
+  "pk": 48,
+  "fields": {
+    "modelo": 8,
+    "quantidade": 2,
+    "data_entrada": "2025-06-03T03:00:00Z",
+    "observacoes": "d"
+  }
+}
+]

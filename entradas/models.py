@@ -6,7 +6,7 @@ class Entrada(models.Model):
     modelo = models.ForeignKey(Modelo, on_delete=models.CASCADE, null=True, blank=True)
     quantidade = models.IntegerField()
     data_entrada = models.DateTimeField(null=True, blank=True)
-    observações = models.TextField(null=True, blank=True)
+    observacoes = models.TextField(null=True, blank=True)
 
     def save(self, *args, **kwargs):
         if self.modelo:
