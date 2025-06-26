@@ -30,14 +30,15 @@
   </div>
 
   <!-- Campo de busca -->
-  <nav class="p-0 mt-4">
-    <div class="container-fluid bg-body-tertiary" style="max-width: 900px; margin-left: 0; border-radius: 50px;">
-      <form class="d-flex p-2" role="search">
-        <input class="form-control me-2" type="search" placeholder="Digite aqui o notebook" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Procurar</button>
-      </form>
-    </div>
-  </nav>
+ <nav class="p-0 mt-4">
+  <div class="container-fluid bg-body-tertiary" style="max-width: 900px; margin-left: 0; border-radius: 50px;">
+    <form class="d-flex p-2" method="GET" action="{% url 'buscar_notebook' %}" role="search">
+      <input class="form-control me-2" type="search" name="q" placeholder="Digite aqui o modelo do notebook" aria-label="Search" />
+      <button class="btn btn-outline-success" type="submit">Procurar</button>
+    </form>
+  </div>
+</nav>
+
 
   <!-- Mapa de localização -->
 <div class="container mt-5">
@@ -65,27 +66,38 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <script>
-  var map = L.map('map').setView([-22.9068, -43.1729], 10); // centro no Rio de Janeiro
+  {{ cidades_marcadores|json_script:"cidades-data" }}
+
+{{ cidades_marcadores|json_script:"cidades-data" }}
+
+<div id="map" style="height: 400px; max-width: 700px; margin: auto;"></div>
+
+<script>
+  var map = L.map('map').setView([-22.9068, -43.1729], 10);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
-  var computerIcon = L.icon({
-    iconUrl: 'https://cdn-icons-png.flaticon.com/512/1086/1086933.png',
-    iconSize: [32, 32],    
-    iconAnchor: [16, 32],  
-    popupAnchor: [0, -32]  
+  var redIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+    shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
   });
 
-  var cidades = {{ cidades_marcadores|safe }};  // <-- LINHA CORRETA
+  var cidades = JSON.parse(document.getElementById('cidades-data').textContent);
 
   cidades.forEach(function(cidade) {
-    L.marker([cidade.lat, cidade.lng], { icon: computerIcon }).addTo(map)
+    L.marker([cidade.lat, cidade.lng], {icon: redIcon})
+      .addTo(map)
       .bindPopup(cidade.cidade);
   });
 </script>
+
+
 
 
 {% endblock %}

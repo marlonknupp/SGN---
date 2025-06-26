@@ -19,7 +19,7 @@ def criar_usuario(request):
 
 def ver_usuario(request, pk):
     usuario = get_object_or_404(Usuario, pk=pk)
-    return render(request, 'usuario/ver.html', {'usuario': usuario})
+    return render(request, 'user/ver.html', {'usuario': usuario})
 
 def editar_usuario(request, pk):
     usuario = get_object_or_404(Usuario, pk=pk)
@@ -27,14 +27,14 @@ def editar_usuario(request, pk):
         form = UsuarioForm(request.POST, instance=usuario)
         if form.is_valid():
             form.save()
-            return redirect('lista_usuario')
+            return redirect('lista_user')
     else:
         form = UsuarioForm(instance=usuario)
-    return render(request, 'usuario/form.html', {'form': form})
+    return render(request, 'user/form.html', {'form': form})
 
 def deletar_usuario(request, pk):
     usuario = get_object_or_404(Usuario, pk=pk)
     if request.method == 'POST':
         usuario.delete()
         return redirect('lista_usuario')
-    return render(request, 'usuario/confirmar_delete.html', {'usuario': usuario})
+    return render(request, 'user/confirmar_delete.html', {'usuario': usuario})

@@ -22,6 +22,8 @@ def home(request):
         'sao goncalo': [-22.8268, -43.0638],
         'rio de janeiro': [-22.9068, -43.1729],
         'niteroi': [-22.8832, -43.1034],
+        'duque de caxias': [-22.786772, -43.314228],
+        'jardim catarina': [-22.800653, -43.000935],
         # outras cidades...
     }
 
@@ -30,7 +32,6 @@ def home(request):
         coord = coordenadas_cidades.get(cidade.lower().strip())
         if coord:
             cidades_marcadores.append({'cidade': cidade, 'lat': coord[0], 'lng': coord[1]})
-
 
     return render(request, 'home.html', {
         'total_notebooks': total_notebooks,

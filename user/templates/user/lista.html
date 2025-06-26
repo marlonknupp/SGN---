@@ -14,7 +14,7 @@
             <th>Telefone</th>
             <th>Email</th>
             <th>CPF</th>
-            <th>Criado em</th>
+            <th>Data</th>
             <th>Ações</th>
 
           </tr>
@@ -27,7 +27,7 @@
                 <td>{{ usuario.telefone }}</td>
                 <td>{{ usuario.email }}</td>
                 <td>{{ usuario.cpf }}</td>
-                <td>{{ usuario.criado_em }}</td>
+                <td>{{ usuario.data }}</td>
                 <td> 
                   <div class="d-flex gap-2">
                     <a href="{% url 'ver_usuario' usuario.id %}" class="btn btn-info btn-sm">

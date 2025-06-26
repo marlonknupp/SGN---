@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h2>Detalhes do Modelo</h2>
-  <p><strong>Modelo:</strong> {{ user.modelo }}</p>
-  <p><strong>telefone:</strong> {{ user.telefone }}</p>
-  <p><strong>email:</strong> {{ user.email }}</p>
-  <p><strong>cpf:</strong> {{ user.cpf }}</p>
-  <p><strong>criado em:</strong> {{ user.criado em }}</p>
+  <h2>Detalhes do Usuário</h2>
+  <p><strong>Nome:</strong> {{ usuario.nome }}</p>
+  <p><strong>Telefone:</strong> {{ usuario.telefone }}</p>
+  <p><strong>Email:</strong> {{ usuario.email }}</p>
+  <p><strong>Cpf:</strong> {{ usuario.cpf }}</p>
+  <p><strong>Data:</strong> {{ usuario.data }}</p>
 
   <a href="{% url 'lista_user' %}" class="btn btn-secondary mt-3">Voltar à lista</a>
 {% endblock %}
