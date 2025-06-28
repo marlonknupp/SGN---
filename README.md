@@ -34,12 +34,11 @@ além de visualizar a **localização dos equipamentos em um mapa interativo**.
 ## 🧑‍💻 Como utilizar o sistema
 
 1. **Clone o repositório:**
-     git clone https://github.com/seu-usuario/sgn.git
+     git clone 
      cd sgn
 
 **2 - Crie e ative o ambiente virtual:**
       python -m venv venv
-      source venv/bin/activate  # Linux/macOS
       venv\Scripts\activate     # Windows
 
 **3 - Instale as dependências:**
