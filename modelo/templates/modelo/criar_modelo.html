@@ -9,12 +9,13 @@
 </head>
 
 <body class="bg-dark text-white">
+  {% load crispy_forms_tags %}
   <div class="container mt-5">
     <h1 class="mb-4">Criar Modelo</h1>
 
     <form method="post" class="p-4 bg-dark text-white border rounded shadow">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form|crispy }}
         <button type="submit" class="btn btn-success mt-3">Salvar</button>
     </form>
   </div>
