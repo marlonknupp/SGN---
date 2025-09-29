@@ -1,5 +1,7 @@
 from pathlib import Path
 import os
+from decouple import config       # python-decouple, biblioteca que permite separar dados sensíveis e configurações do seu código
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
